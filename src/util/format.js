@@ -1,4 +1,7 @@
-export const { format: formatPrice } = new Intl.NumberFormat('pt-BR', {
-  style: 'currency',
-  currency: 'BRL',
-});
+import numeral from 'numeral';
+import 'numeral/locales';
+
+export function formatPrice(number) {
+  numeral.locale('pt-br');
+  numeral(number).format('0,0');
+}

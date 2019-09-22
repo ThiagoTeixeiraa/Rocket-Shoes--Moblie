@@ -4,6 +4,7 @@ import colors from '../../styles/colors';
 
 export const Container = styled.View`
   background: ${colors.dark};
+  padding-top: 52px;
 `;
 
 export const Product = styled.View`

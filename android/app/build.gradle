@@ -109,6 +109,7 @@ def enableProguardInReleaseBuilds = false
  * this variant is about 6MiB larger per architecture than default.
  */
 def jscFlavor = 'org.webkit:android-jsc:+'
+def useIntlJsc = true
 
 /**
  * Whether to enable the Hermes VM.
@@ -184,6 +185,7 @@ android {
         pickFirst '**/x86_64/libc++_shared.so'
         pickFirst '**/x86/libjsc.so'
         pickFirst '**/armeabi-v7a/libjsc.so'
+        pickFirst '**/libgnustl_shared.so'
     }
 }
 
